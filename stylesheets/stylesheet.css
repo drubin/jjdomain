@@ -234,7 +234,7 @@ Full-Width Styles
 
 #header_wrap {
   background: #212121;
-  background: url('../images/bg.jpg') no-repeat 50%;
+  background: url('../images/bg.jpg') #f2f2f2 no-repeat 100%;
 }
 
 #header_wrap .inner {
