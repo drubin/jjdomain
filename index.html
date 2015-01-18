@@ -1,70 +1,23 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Slate is a responsive theme for GitHub Pages" />
+<div class="home">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <h1 class="page-heading">Posts</h1>
 
-    <title>JJ's New Home Page</title>
-  </head>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <body>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/drubin/jjdomain">View on GitHub</a>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-          <h1 id="project_title">JJ Steyn</h1>
-          <h2 id="project_tagline">JJ's Home Page</h2>
-
-        <!--           
-          <section id="downloads">
-            <a class="zip_download_link" href="#">Download this project as a .zip file</a>
-            <a class="tar_download_link" href="#">Download this project as a tar.gz file</a>
-          </section> 
-        -->
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>Your Christmas Gift</h1>
-        <p>Since you are far away I thought long and hard about a gift I could give you that you could get while away.</p>
-        <p>You have been saying for a long time you wanted to learn to make websites. Well here is your chance. You now have your very own domain <strong><a href="http://co.za/cgi-bin/whois.sh?Domain=jjsteyn&amp;Enter=Enter">www.jjsteyn.co.za</a></strong></p>
-
-<a href="secondpage.html">clicking here should open the second page. If it doesn't, it is because I am just clueless.</a>
-
-        <p>I could have added lots of pics of dogs and cats and rats and bats and snakes and spiders and people, but that is now your job! Obviously you will get all the help you need all you have to do is ask.</p>
-
-        <h5>Steps</h5>
-        <ol>
-        <li>Fork this repo</li>
-        <li>Install and learn git</li>
-        <li>Clone it locally</li>
-        <li>Install Ruby</li>
-        <li>Run it localy</li>
-        <li>Make changes</li>
-        <li>Commit your change</li>
-        <li>Push it</li>
-        </ol>
-
-        <h1>Thats all</h1>
-
-      </section>
-    </div>
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Built you by your David</p> 
-        <p class="copyright">using Slate theme by <a href="https://github.com/jsncostello">Jason Costello</a></p>
-       <!-- <p class="copyright">Slate theme maintained by </p>-->
-      </footer>
-    </div>
-
-  </body>
-</html>
+</div>
